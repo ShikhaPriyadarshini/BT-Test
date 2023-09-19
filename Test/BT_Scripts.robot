@@ -15,14 +15,11 @@ ${BT_URL}          https://www.bt.com/
 #${Browser}         Chrome       executable_path=Configuration/chromedriver.exe
 
 *** Test Cases ***
-BT_TC1    [Documentation]
-	Open Browser     https://www.bt.com/     browser=Chrome     executable_path=Configuration/chromedriver.exe
-    wait until page contains    ${BT_URL}
+BT_TC1    [Documentation]    Open Browser     https://www.bt.com/     browser=Chrome     executable_path=Configuration/chromedriver.exe    Wait Until Page Contains    ${BT_URL}
     maximize browser window
-    Wait and click   ${Mobile}
-    wait and click   ${Mobile_Phones}
+    Wait And Click      ${Cookies}
+    Wait And Click   ${Mobile}
+    Wait And Click   ${Mobile_Phones}
     ${Count}    Banner Count
-    wait and click   ${View_Sim}
-    title should be     SIM Only Deals | Compare SIMO Plans & Contracts | BT Mobile
-    Validate Deals
-    close browser
+    Wait And Click   ${View_Sim}
+    Title Should Be     SIM Only Deals | Compare SIMO Plans & Contracts | BT Mobile    Validate Deals

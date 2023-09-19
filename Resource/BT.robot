@@ -3,6 +3,16 @@ Resource                ..//Locators/Locators.robot
 
 *** Keywords ***
 
+Wait And Click
+	[Documentation]    Waits for the element to be visible and clicks on the element.
+	 ...   Arguments:
+	 ...   1. Locator - The xpath element to be clicked
+	 ...   2. Timeout - Timeout for the script to wait for element to be visible. This is optional argument. If it is passed in the argument, it will use the timeout passed in the argument, else it will use the timeout configured in the properties.yaml file
+	 ...   Fails if the locator is not visible or if the locator is not interactable.
+	 [Arguments]   ${Locator}   ${Timeout}=80    # ${Timeout}=${Wait_Time}
+	 Wait Until Element Is Visible   ${Locator}   ${Timeout}    \nFAILED :: Locator ${Locator} is not visible.
+	 Wait Until Keyword Succeeds    3x   1 sec    Click Element   ${Locator}
+
 Go To BT Home
 	Log And Log To Console  \n Navigating to BT
     switch browser  BT
