@@ -12,10 +12,11 @@ Variables               ..//Properties.yaml
 
 *** Variables ***
 ${BT_URL}          https://www.bt.com/
-${Browser}         Chrome       executable_path=Configuration/chromedriver.exe
+#${Browser}         Chrome       executable_path=Configuration/chromedriver.exe
 
 *** Test Cases ***
-BT_TC1    [Documentation]    Open Browser     https://www.bt.com/     ${Browser}
+BT_TC1    [Documentation]
+	Open Browser     https://www.bt.com/     browser=Chrome     executable_path=Configuration/chromedriver.exe
     wait until page contains    ${BT_URL}
     maximize browser window
     Wait and click   ${Mobile}
