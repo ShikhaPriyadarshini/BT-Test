@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230919 21:42:25.243" rpa="false" schemaversion="4">
+<suite id="s1" name="BT Scripts" source="C:\Users\DELL\PycharmProjects\BT\Test\BT_Scripts.robot">
+<test id="s1-t1" name="BT_TC1" line="18">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.bt.com/</arg>
+<arg>browser=Chrome</arg>
+<arg>executable_path=C:\\Users\\DELL\\PycharmProjects\\BT\\Configuration\\chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 21:42:25.869" level="INFO">Opening browser 'Chrome' to base url 'https://www.bt.com/'.</msg>
+<status status="PASS" starttime="20230919 21:42:25.869" endtime="20230919 21:42:30.163"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${BT_URL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230919 21:42:30.165" endtime="20230919 21:42:30.188"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230919 21:42:30.188" endtime="20230919 21:42:30.309"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>${Frame}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230919 21:42:30.309" level="INFO">Selecting frame '//iframe[contains(@id, "pop-frame")]'.</msg>
+<status status="PASS" starttime="20230919 21:42:30.309" endtime="20230919 21:42:30.383"/>
+</kw>
+<kw name="Wait And Click" library="BT">
+<arg>${Cookies}</arg>
+<doc>Waits for the element to be visible and clicks on the element.
+Arguments:
+1. Locator - The xpath element to be clicked
+2. Timeout - Timeout for the script to wait for element to be visible. This is optional argument. If it is passed in the argument, it will use the timeout passed in the argument, else it will use the timeout configured in the properties.yaml file
+Fails if the locator is not visible or if the locator is not interactable.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Locator}</arg>
+<arg>${Timeout}</arg>
+<arg>\nFAILED :: Locator ${Locator} is not visible.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230919 21:42:30.384" endtime="20230919 21:42:32.241"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>1 sec</arg>
+<arg>Click Element</arg>
+<arg>${Locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 21:42:32.244" level="INFO">Clicking element '//a[@class="call"]'.</msg>
+<status status="PASS" starttime="20230919 21:42:32.243" endtime="20230919 21:42:32.371"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:32.241" endtime="20230919 21:42:32.371"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:30.384" endtime="20230919 21:42:32.371"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230919 21:42:32.372" endtime="20230919 21:42:32.377"/>
+</kw>
+<kw name="Wait And Click" library="BT">
+<arg>${Mobile}</arg>
+<doc>Waits for the element to be visible and clicks on the element.
+Arguments:
+1. Locator - The xpath element to be clicked
+2. Timeout - Timeout for the script to wait for element to be visible. This is optional argument. If it is passed in the argument, it will use the timeout passed in the argument, else it will use the timeout configured in the properties.yaml file
+Fails if the locator is not visible or if the locator is not interactable.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Locator}</arg>
+<arg>${Timeout}</arg>
+<arg>\nFAILED :: Locator ${Locator} is not visible.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230919 21:42:32.378" endtime="20230919 21:42:34.517"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>1 sec</arg>
+<arg>Click Element</arg>
+<arg>${Locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 21:42:34.519" level="INFO">Clicking element '//a[@data-di-id="di-id-7c56fcc8-3103e56f"]'.</msg>
+<status status="PASS" starttime="20230919 21:42:34.519" endtime="20230919 21:42:34.603"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:34.517" endtime="20230919 21:42:34.604"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:32.378" endtime="20230919 21:42:34.604"/>
+</kw>
+<kw name="Wait And Click" library="BT">
+<arg>${Mobile_Phones}</arg>
+<doc>Waits for the element to be visible and clicks on the element.
+Arguments:
+1. Locator - The xpath element to be clicked
+2. Timeout - Timeout for the script to wait for element to be visible. This is optional argument. If it is passed in the argument, it will use the timeout passed in the argument, else it will use the timeout configured in the properties.yaml file
+Fails if the locator is not visible or if the locator is not interactable.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Locator}</arg>
+<arg>${Timeout}</arg>
+<arg>\nFAILED :: Locator ${Locator} is not visible.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230919 21:42:34.609" endtime="20230919 21:42:34.640"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>1 sec</arg>
+<arg>Click Element</arg>
+<arg>${Locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 21:42:34.640" level="INFO">Clicking element '//a[@data-di-id="di-id-1672f262-8d36f8c2"]'.</msg>
+<status status="PASS" starttime="20230919 21:42:34.640" endtime="20230919 21:42:40.621"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:34.640" endtime="20230919 21:42:40.621"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:34.608" endtime="20230919 21:42:40.621"/>
+</kw>
+<kw name="Banner Count" library="BT">
+<var>${Count}</var>
+<doc>This keyword will count the banner.</doc>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Banner_Class}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230919 21:42:40.739" level="INFO">${count} = 3</msg>
+<status status="PASS" starttime="20230919 21:42:40.624" endtime="20230919 21:42:40.740"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${count} &gt;= 3</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230919 21:42:40.740" endtime="20230919 21:42:40.740"/>
+</kw>
+<msg timestamp="20230919 21:42:40.741" level="INFO">${Count} = 3</msg>
+<status status="PASS" starttime="20230919 21:42:40.623" endtime="20230919 21:42:40.741"/>
+</kw>
+<kw name="Wait And Click" library="BT">
+<arg>${View_Sim}</arg>
+<doc>Waits for the element to be visible and clicks on the element.
+Arguments:
+1. Locator - The xpath element to be clicked
+2. Timeout - Timeout for the script to wait for element to be visible. This is optional argument. If it is passed in the argument, it will use the timeout passed in the argument, else it will use the timeout configured in the properties.yaml file
+Fails if the locator is not visible or if the locator is not interactable.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Locator}</arg>
+<arg>${Timeout}</arg>
+<arg>\nFAILED :: Locator ${Locator} is not visible.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230919 21:42:40.742" endtime="20230919 21:42:41.326"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>1 sec</arg>
+<arg>Click Element</arg>
+<arg>${Locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 21:42:41.327" level="INFO">Clicking element '//a[@data-di-id="di-id-f6103190-3a42ff4a"]'.</msg>
+<status status="PASS" starttime="20230919 21:42:41.327" endtime="20230919 21:42:41.882"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:41.326" endtime="20230919 21:42:41.882"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:40.742" endtime="20230919 21:42:41.882"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SIM Only Deals | Compare SIMO Plans &amp; Contracts | BT Mobile</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230919 21:42:41.990" level="INFO">Page title is 'SIM Only Deals | Compare SIMO Plans &amp; Contracts | BT Mobile'.</msg>
+<status status="PASS" starttime="20230919 21:42:41.882" endtime="20230919 21:42:41.990"/>
+</kw>
+<kw name="Validate Deals" library="BT">
+<arg>${Deals}</arg>
+<doc>This keyword will validate the sim only deals</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<arg>Wait Until Element Contains</arg>
+<arg>${Deals}</arg>
+<arg>was</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${Deals}</arg>
+<arg>was</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230919 21:42:41.990" endtime="20230919 21:42:42.048"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:41.990" endtime="20230919 21:42:42.048"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:41.990" endtime="20230919 21:42:42.048"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 21:42:42.049" endtime="20230919 21:42:44.337"/>
+</kw>
+<status status="PASS" starttime="20230919 21:42:25.869" endtime="20230919 21:42:44.337"/>
+</test>
+<status status="PASS" starttime="20230919 21:42:25.243" endtime="20230919 21:42:44.337"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BT Scripts">BT Scripts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
